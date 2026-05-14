@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Contact Us — Water Solution Nepal Pvt. Ltd.</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="main.css">
+<style>
+    /* ───────────────── SERVICES PAGE STYLE ───────────────── */
+
+.services-page{
+  position:relative;
+  padding:140px 0;
+  overflow:hidden;
+  background:
+    linear-gradient(135deg,#04131d 0%, #071b27 100%);
+}
+.section-tag{
+    font-size: 35px ;
+}
+/* Glow */
+.services-glow{
+  position:absolute;
+  border-radius:50%;
+  filter:blur(120px);
+  opacity:.25;
+}
+
+.glow-left{
+  width:360px;
+  height:360px;
+  background:#00C2FF;
+  top:-120px;
+  left:-120px;
+}
+
+.glow-right{
+  width:320px;
+  height:320px;
+  background:#0FF0C8;
+  bottom:-120px;
+  right:-120px;
+}
+
+/* Hero */
+.services-hero{
+  text-align:center;
+  /* max-width:900px; */
+  margin:0 auto 80px;
+}
+
+.services-title{
+  font-size:64px;
+  font-weight:800;
+  color:#fff;
+  line-height:1.1;
+  margin:20px 0;
+  font-family:'Syne',sans-serif;
+}
+
+.services-title span{
+  background:linear-gradient(135deg,#00C2FF,#0FF0C8);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.services-subtitle{
+  color:rgba(255,255,255,.72);
+  font-size:17px;
+  line-height:1.9;
+}
+
+/* Grid */
+.services-page-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+  margin-bottom:100px;
+}
+
+/* Card */
+.service-page-card{
+  padding:40px 30px;
+  border-radius:28px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(20px);
+  transition:.4s ease;
+  position:relative;
+  overflow:hidden;
+}
+
+.service-page-card:hover{
+  transform:translateY(-10px);
+  border-color:rgba(15,240,200,.3);
+}
+
+/* Icon */
+.service-page-card .service-icon{
+  font-size:42px;
+  margin-bottom:18px;
+}
+
+/* Text */
+.service-page-card h3{
+  color:#fff;
+  font-size:24px;
+  margin-bottom:15px;
+  font-family:'Syne',sans-serif;
+}
+
+.service-page-card p{
+  color:rgba(255,255,255,.7);
+  line-height:1.8;
+  font-size:15px;
+}
+
+/* CTA */
+.services-cta{
+  text-align:center;
+  padding:80px 40px;
+  border-radius:40px;
+  background:linear-gradient(135deg,rgba(0,194,255,.15),rgba(15,240,200,.12));
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.services-cta h2{
+  color:#fff;
+  font-size:52px;
+  margin-bottom:20px;
+  font-family:'Syne',sans-serif;
+}
+
+.services-cta p{
+  color:rgba(255,255,255,.72);
+  margin-bottom:30px;
+}
+
+.services-cta a{
+  display:inline-block;
+  padding:18px 34px;
+  border-radius:18px;
+  background:linear-gradient(135deg,#00C2FF,#0FF0C8);
+  color:#04131d;
+  font-weight:700;
+  text-decoration:none;
+  transition:.4s ease;
+}
+
+.services-cta a:hover{
+  transform:translateY(-5px);
+}
+
+/* Responsive */
+@media(max-width:991px){
+
+  .services-page-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .services-title{
+    font-size:44px;
+  }
+
+}
+
+@media(max-width:576px){
+
+  .services-page{
+    padding:100px 0;
+  }
+
+  .services-page-grid{
+    grid-template-columns:1fr;
+  }
+
+  .services-title{
+    font-size:34px;
+  }
+
+  .services-cta h2{
+    font-size:32px;
+  }
+
+}
+</style>
+</head>
+<body>
+
+<!-- ─── NAVBAR ─── -->
+<nav class="navbar navbar-expand-lg" id="navbar">
+  <div class="container">
+    <a class="nav-logo" href="index2.html">
+      <div class="nav-logo-icon">💧</div>
+      <div class="nav-logo-text">
+        <span>Water Solution Nepal</span>
+        <span>PVT. LTD.</span>
+      </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-center gap-1">
+        <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="process.html">Process</a></li>
+        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        <li class="nav-item ms-2"><a class="nav-link btn-nav" href="contact.html">Get Consultation</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- main contact part -->
+
+
+<!-- ───────────────── SERVICES PAGE (service.html) ───────────────── -->
+<section class="services-page">
+
+  <!-- Background Effects -->
+  <div class="services-glow glow-left"></div>
+  <div class="services-glow glow-right"></div>
+
+  <div class="container">
+
+    <!-- HERO -->
+    <div class="services-hero" data-aos="fade-up">
+
+      <span class="section-tag">OUR SERVICES</span>
+
+      <h1 class="services-title">
+        Complete Water Treatment <span>Engineering Solutions</span>
+      </h1>
+
+      <p class="services-subtitle">
+        We design, build and maintain advanced water treatment systems for
+        industrial, commercial and residential needs across Nepal.
+      </p>
+
+    </div>
+
+    <!-- GRID -->
+    <div class="services-page-grid">
+
+      <!-- Card 1 -->
+      <div class="service-page-card" data-aos="fade-up">
+        <div class="service-icon">🏭</div>
+        <h3>Industrial RO Plant</h3>
+        <p>
+          High-capacity reverse osmosis systems designed for factories,
+          manufacturing units and large industrial operations up to 50,000 LPH.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="service-page-card" data-aos="fade-up" data-aos-delay="80">
+        <div class="service-icon">🏨</div>
+        <h3>Commercial Water Treatment</h3>
+        <p>
+          Smart water purification systems for hotels, hospitals,
+          offices and commercial buildings with automation support.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="service-page-card" data-aos="fade-up" data-aos-delay="160">
+        <div class="service-icon">🔬</div>
+        <h3>Water Testing & Analysis</h3>
+        <p>
+          Certified lab testing for TDS, pH, bacteria, heavy metals and
+          full water quality reporting within 24 hours.
+        </p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="service-page-card" data-aos="fade-up">
+        <div class="service-icon">💧</div>
+        <h3>Water Filtration Systems</h3>
+        <p>
+          Multi-stage filtration systems including sediment, carbon,
+          UV and ultrafiltration for homes and offices.
+        </p>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="service-page-card" data-aos="fade-up" data-aos-delay="80">
+        <div class="service-icon">🔧</div>
+        <h3>AMC & Maintenance</h3>
+        <p>
+          Annual maintenance contracts with priority service,
+          scheduled inspections and 24/7 emergency support.
+        </p>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="service-page-card" data-aos="fade-up" data-aos-delay="160">
+        <div class="service-icon">🌊</div>
+        <h3>Borewell Treatment</h3>
+        <p>
+          Iron, fluoride and arsenic removal systems for safe
+          and clean borewell drinking water.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="services-cta" data-aos="fade-up">
+
+      <h2>Need a Custom Water Treatment Solution?</h2>
+
+      <p>
+        Our engineering team will design a system tailored to your exact requirements.
+      </p>
+
+      <a href="contact.html">Get Free Consultation →</a>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="container">
+    <div class="row gy-5">
+      <div class="col-lg-4">
+        <div class="footer-brand">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+            <div style="width:40px;height:40px;background:linear-gradient(135deg,#00C2FF,#0FF0C8);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;">💧</div>
+            <div class="logo-text">Water Solution Nepal</div>
+          </div>
+          <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;">PVT. LTD. · EST. 2015</div>
+        </div>
+        <p class="footer-tagline">Nepal's most trusted industrial & commercial water treatment engineering company. Pure water, smart systems, lifelong support.</p>
+        <div class="footer-social">
+          <a class="social-btn" href="#">f</a>
+          <a class="social-btn" href="#">in</a>
+          <a class="social-btn" href="#">▶</a>
+          <a class="social-btn" href="#">✉</a>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-2">
+        <div class="footer-heading">Services</div>
+        <ul class="footer-links">
+          <li><a href="#">Industrial RO Plant</a></li>
+          <li><a href="#">Commercial Treatment</a></li>
+          <li><a href="#">Water Filtration</a></li>
+          <li><a href="#">Water Testing</a></li>
+          <li><a href="#">AMC & Maintenance</a></li>
+          <li><a href="#">Borewell Treatment</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-6 col-lg-2">
+        <div class="footer-heading">Company</div>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="project.html">Projects</a></li>
+          <li><a href="certification.html">Certifications</a></li>
+          <li><a href="career.html">Careers</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <div class="footer-heading">Get in Touch</div>
+        <div class="footer-contact">
+          <div class="contact-item">
+            <span class="icon">📍</span>
+            <div class="text"><strong>Head Office</strong>New Baneshwor, Kathmandu, Bagmati Province, Nepal</div>
+          </div>
+          <div class="contact-item">
+            <span class="icon">📞</span>
+            <div class="text"><strong>Phone / WhatsApp</strong>+977 01-XXXXXXX · +977 98XXXXXXXX</div>
+          </div>
+          <div class="contact-item">
+            <span class="icon">✉️</span>
+            <div class="text"><strong>Email</strong>info@watersolutionnepal.com</div>
+          </div>
+        </div>
+        <div style="margin-top:20px;">
+          <div class="footer-heading">Newsletter</div>
+          <p style="font-size:12.5px;color:var(--text-muted);margin-bottom:10px;">Get water quality tips and service updates.</p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="Your email address">
+            <button>Subscribe</button>
+          </div>
+        </div>
+        <div class="map-embed mt-3">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.0!2d85.3240!3d27.7172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDA0JzEwLjkiTiA4NcKwMTknMjYuNCJF!5e0!3m2!1sen!2snp!4v1000000000000!5m2!1sen!2snp" loading="lazy" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-text">© 2026 Water Solution Nepal Pvt. Ltd. All rights reserved. Powered by <a href="https://www.turantcall.com" target="_blank">Turant Call</a></div>
+      <div class="footer-bottom-badges">
+        <!-- <div class="cert-badge">ISO Certified</div>
+        <div class="cert-badge">NSF Approved</div>
+        <div class="cert-badge">WHO Compliant</div> -->
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="shared.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>

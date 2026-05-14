@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Water Solution Nepal Pvt. Ltd. — Pure Water. Smart Future.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<!-- ─── NAVBAR ─── -->
+<nav class="navbar navbar-expand-lg" id="navbar">
+  <div class="container">
+    <a class="nav-logo" href="index2.html">
+      <div class="nav-logo-icon">💧</div>
+      <div class="nav-logo-text">
+        <span>Water Solution Nepal</span>
+        <span>PVT. LTD.</span>
+      </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-center gap-1">
+        <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <!-- <li class="nav-item"><a class="nav-link" href="process.html">Process</a></li> -->
+        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        <li class="nav-item ms-2"><a class="nav-link btn-nav" href="contact.html">Get Consultation</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section id="hero">
+  <canvas id="hero-canvas"></canvas>
+  <canvas id="particles-bg"></canvas>
+  <div class="hero-bg-glow"></div>
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-6 hero-content">
+        <div class="hero-badge" data-aos="fade-down" data-aos-duration="700">
+          <span></span>
+          Kathmandu, Nepal · Est. 2015
+        </div>
+        <h1 class="hero-headline" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+          <span class="line1">Pure Water.</span>
+          <span class="line2">Smart Future.</span>
+        </h1>
+        <p class="hero-subtitle" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+          Nepal's most trusted industrial & commercial water treatment specialists. From RO plants to complete purification systems — we engineer clean water solutions for businesses that demand excellence.
+        </p>
+        <div class="hero-btns" data-aos="fade-up" data-aos-duration="700" data-aos-delay="300">
+          <button class="btn-primary-hero" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})">
+            ✦ Get Free Consultation
+          </button>
+          <button class="btn-outline-hero" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">
+            ⊕ Explore Solutions
+          </button>
+        </div>
+        
+      </div>
+      <div class="col-lg-6 hero-visual" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+        <div class="ro-plant-wrap">
+          <div class="ro-main-card">
+            <div class="ro-diagram">
+              <svg class="ro-svg" viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="pipeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#003d5c;stop-opacity:1"/>
+                    <stop offset="50%" style="stop-color:#00C2FF;stop-opacity:.8"/>
+                    <stop offset="100%" style="stop-color:#0FF0C8;stop-opacity:.6"/>
+                  </linearGradient>
+                  <linearGradient id="tankGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#0B3D91;stop-opacity:.9"/>
+                    <stop offset="100%" style="stop-color:#003d5c;stop-opacity:.9"/>
+                  </linearGradient>
+                  <filter id="glow">
+                    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                    <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                  </filter>
+                  <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+                    <path d="M0,0 L0,6 L8,3 z" fill="#00C2FF" opacity=".7"/>
+                  </marker>
+                </defs>
+                <!-- Water source tank -->
+                <rect x="20" y="80" width="60" height="140" rx="8" fill="url(#tankGrad)" stroke="#00C2FF" stroke-width="1.5" opacity=".9"/>
+                <text x="50" y="72" text-anchor="middle" fill="#00C2FF" font-size="10" font-family="Plus Jakarta Sans">RAW WATER</text>
+                <rect x="22" y="180" width="56" height="38" rx="4" fill="#00C2FF" opacity=".2"/>
+                <rect x="22" y="160" width="56" height="22" rx="4" fill="#00C2FF" opacity=".12"/>
+                <!-- Pre-filter -->
+                <rect x="130" y="100" width="50" height="100" rx="8" fill="url(#tankGrad)" stroke="#0FF0C8" stroke-width="1.5"/>
+                <text x="155" y="92" text-anchor="middle" fill="#0FF0C8" font-size="9" font-family="Plus Jakarta Sans">PRE-FILTER</text>
+                <circle cx="155" cy="150" r="28" fill="none" stroke="#0FF0C8" stroke-width="1" opacity=".4"/>
+                <circle cx="155" cy="150" r="18" fill="none" stroke="#0FF0C8" stroke-width="1.5" opacity=".6"/>
+                <!-- RO Membrane -->
+                <ellipse cx="270" cy="150" rx="30" ry="62" fill="url(#tankGrad)" stroke="#00C2FF" stroke-width="2"/>
+                <ellipse cx="270" cy="150" rx="16" ry="46" fill="none" stroke="#00C2FF" stroke-width="1" opacity=".5"/>
+                <text x="270" y="230" text-anchor="middle" fill="#00C2FF" font-size="9.5" font-family="Plus Jakarta Sans">RO MEMBRANE</text>
+                <!-- Output tank -->
+                <rect x="370" y="80" width="60" height="140" rx="8" fill="url(#tankGrad)" stroke="#0FF0C8" stroke-width="1.5"/>
+                <text x="400" y="72" text-anchor="middle" fill="#0FF0C8" font-size="10" font-family="Plus Jakarta Sans">PURE WATER</text>
+                <rect x="372" y="82" width="56" height="136" rx="6" fill="#0FF0C8" opacity=".08"/>
+                <!-- Pipes with animation -->
+                <path d="M80 150 L130 150" stroke="url(#pipeGrad)" stroke-width="8" stroke-linecap="round" filter="url(#glow)">
+                  <animate attributeName="stroke-dashoffset" values="50;0" dur="1.5s" repeatCount="indefinite"/>
+                </path>
+                <path d="M180 150 L240 150" stroke="url(#pipeGrad)" stroke-width="8" stroke-linecap="round" filter="url(#glow)">
+                  <animate attributeName="stroke-dashoffset" values="50;0" dur="1.5s" begin=".3s" repeatCount="indefinite"/>
+                </path>
+                <path d="M300 150 L370 150" stroke="url(#pipeGrad)" stroke-width="8" stroke-linecap="round" filter="url(#glow)">
+                  <animate attributeName="stroke-dashoffset" values="50;0" dur="1.5s" begin=".6s" repeatCount="indefinite"/>
+                </path>
+                <!-- Pump circle -->
+                <circle cx="105" cy="150" r="14" fill="#0B3D91" stroke="#00C2FF" stroke-width="1.5" filter="url(#glow)"/>
+                <text x="105" y="154" text-anchor="middle" fill="#00C2FF" font-size="10">⚙</text>
+                <!-- Labels -->
+                <text x="240" y="260" text-anchor="middle" fill="rgba(200,220,255,0.4)" font-size="9" font-family="Plus Jakarta Sans">HIGH-PRESSURE PUMP SYSTEM</text>
+                <!-- Droplets animating upward -->
+                <circle cx="400" cy="200" r="3" fill="#0FF0C8" opacity=".8">
+                  <animate attributeName="cy" values="200;82" dur="2s" repeatCount="indefinite" begin="0s"/>
+                  <animate attributeName="opacity" values=".8;0" dur="2s" repeatCount="indefinite" begin="0s"/>
+                </circle>
+                <circle cx="390" cy="180" r="2" fill="#00C2FF" opacity=".6">
+                  <animate attributeName="cy" values="180;82" dur="2.5s" repeatCount="indefinite" begin=".5s"/>
+                  <animate attributeName="opacity" values=".6;0" dur="2.5s" repeatCount="indefinite" begin=".5s"/>
+                </circle>
+              </svg>
+            </div>
+            <div class="mt-3 d-flex justify-content-around">
+              <div class="text-center">
+                <div style="font-family:Syne,sans-serif;font-size:22px;font-weight:800;background:linear-gradient(90deg,#00C2FF,#0FF0C8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">99.9%</div>
+                <div style="font-size:10px;color:var(--text-muted);letter-spacing:1px;text-transform:uppercase;">Purification</div>
+              </div>
+              <div style="width:1px;background:var(--glass-border)"></div>
+              <div class="text-center">
+                <div style="font-family:Syne,sans-serif;font-size:22px;font-weight:800;background:linear-gradient(90deg,#00C2FF,#0FF0C8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">0 TDS</div>
+                <div style="font-size:10px;color:var(--text-muted);letter-spacing:1px;text-transform:uppercase;">Output</div>
+              </div>
+              <div style="width:1px;background:var(--glass-border)"></div>
+              <div class="text-center">
+                <div style="font-family:Syne,sans-serif;font-size:22px;font-weight:800;background:linear-gradient(90deg,#00C2FF,#0FF0C8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">ISO</div>
+                <div style="font-size:10px;color:var(--text-muted);letter-spacing:1px;text-transform:uppercase;">Certified</div>
+              </div>
+            </div>
+          </div>
+          <!-- Floating cards -->
+          <div class="float-card fc1">
+            <div class="fc-label">Water Quality</div>
+            <div class="fc-value">●<span style="color:#0FF0C8">●</span>●</div>
+            <div class="fc-unit">Excellent</div>
+          </div>
+          <div class="float-card fc2">
+            <div class="fc-label">System Status</div>
+            <div class="fc-value" style="color:#0FF0C8;font-size:16px;">ONLINE</div>
+            <div class="fc-unit">Active · 24/7</div>
+          </div>
+          <div class="float-card fc3">
+            <div class="fc-label">TDS Level</div>
+            <div class="fc-value">≤5</div>
+            <div class="fc-unit">ppm output</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+</section>
+
+<!-- ─── TRUST ─── -->
+<section id="trust">
+  <div class="container">
+    <div class="trust-counter-wrap">
+      <div class="trust-counter" data-aos="fade-up" data-aos-delay="0">
+        <div class="counter-icon">🏗️</div>
+        <div class="counter-num" data-target="200">0</div>
+        <div class="counter-label">Projects Completed</div>
+      </div>
+      <div class="trust-counter" data-aos="fade-up" data-aos-delay="100">
+        <div class="counter-icon">📅</div>
+        <div class="counter-num" data-target="9">0</div>
+        <div class="counter-label">Years of Experience</div>
+      </div>
+      <div class="trust-counter" data-aos="fade-up" data-aos-delay="200">
+        <div class="counter-icon">😊</div>
+        <div class="counter-num" data-target="500">0</div>
+        <div class="counter-label">Happy Clients</div>
+      </div>
+      <div class="trust-counter" data-aos="fade-up" data-aos-delay="300">
+        <div class="counter-icon">🔬</div>
+        <div class="counter-num" data-target="1000">0</div>
+        <div class="counter-label">Water Tests Done</div>
+      </div>
+    </div>    
+  </div>
+</section>
+
+<!-- ─── SERVICES ─── -->
+<section id="services">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7" data-aos="fade-up">
+        <span class="section-tag">What We Do</span>
+        <h2 class="section-title">Complete Water <span class="accent">Treatment</span><br>Solutions</h2>
+        <p class="section-subtitle">From industrial-scale RO plants to residential filtration — engineered with precision for Nepal's water challenges.</p>
+      </div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="card-glow"></div>
+        <div class="service-icon">🏭</div>
+        <div class="service-name">Industrial RO Plant</div>
+        <p class="service-desc">High-capacity reverse osmosis systems for factories, manufacturing units and large-scale industrial facilities up to 50,000 LPH.</p>
+        <div class="service-arrow">Learn More →</div>
+      </div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="80">
+        <div class="card-glow"></div>
+        <div class="service-icon">🏨</div>
+        <div class="service-name">Commercial Water Treatment</div>
+        <p class="service-desc">Complete treatment solutions for hotels, hospitals, and commercial buildings with smart monitoring and automation.</p>
+        <div class="service-arrow">Learn More →</div>
+      </div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="160">
+        <div class="card-glow"></div>
+        <div class="service-icon">🔬</div>
+        <div class="service-name">Water Testing & Analysis</div>
+        <p class="service-desc">Certified lab testing for TDS, pH, bacteria, heavy metals and 50+ parameters. Get your full water quality report in 24 hours.</p>
+        <div class="service-arrow">Learn More →</div>
+      </div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="card-glow"></div>
+        <div class="service-icon">💧</div>
+        <div class="service-name">Water Filtration Systems</div>
+        <p class="service-desc">Multi-stage filtration including sediment, carbon, UV and ultrafiltration systems for homes and offices.</p>
+        <div class="service-arrow">Learn More →</div>
+      </div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="80">
+        <div class="card-glow"></div>
+        <div class="service-icon">🔧</div>
+        <div class="service-name">AMC & Maintenance</div>
+        <p class="service-desc">Annual maintenance contracts with priority response, scheduled service, parts replacement and 24/7 emergency support.</p>
+        <div class="service-arrow">Learn More →</div>
+      </div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="160">
+        <div class="card-glow"></div>
+        <div class="service-icon">🌊</div>
+        <div class="service-name">Borewell Treatment</div>
+        <p class="service-desc">Iron removal, fluoride treatment, arsenic removal and complete borewell water conditioning for safe drinking water.</p>
+        <div class="service-arrow">Learn More →</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── ABOUT ─── -->
+<section id="about">
+  <div class="container" style="position:relative;z-index:1">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-5" data-aos="fade-right" data-aos-duration="900">
+        <div class="about-img-wrap">
+          <div class="about-img-frame">
+            <div style="width:100%;aspect-ratio:1.1;background:linear-gradient(135deg,#0B3D91,#003d5c,#001830);display:flex;align-items:center;justify-content:center;font-size:100px;">
+              <img src="sewage treatment plant_edited.avif" alt="">
+            </div>
+          </div>
+          <div class="about-badge-floating">
+            <div class="num">200+</div>
+            <div class="lbl">Plants Installed</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7 ps-lg-5" data-aos="fade-left" data-aos-duration="900">
+        <span class="section-tag">About Us</span>
+        <h2 class="section-title mb-4">Nepal's Premium <span class="accent">Water Engineering</span> Company</h2>
+        <p style="font-size:15.5px;color:var(--text-muted);line-height:1.8;margin-bottom:28px;">
+          Water Solution Nepal Pvt. Ltd. was established with a single mission: to ensure every Nepali business has access to clean, safe, and reliable water. Based in Kathmandu, we operate across all provinces, delivering international-grade water treatment solutions with local expertise.
+        </p>
+        <p style="font-size:15.5px;color:var(--text-muted);line-height:1.8;margin-bottom:36px;">
+          Our team of certified engineers brings decades of combined experience, using the latest German and Japanese membrane technology to deliver systems that last and perform.
+        </p>
+        <div class="about-features">
+          <div class="about-feat">
+            <div class="about-feat-icon">🎓</div>
+            <div class="about-feat-text">
+              <h4>Certified & Trained Engineers</h4>
+              <p>All our engineers are internationally certified in water treatment technology and safety protocols.</p>
+            </div>
+          </div>
+          <div class="about-feat">
+            <div class="about-feat-icon">🌏</div>
+            <div class="about-feat-text">
+              <h4>Nepal-wide Service Network</h4>
+              <p>Service centers and technicians available across all 7 provinces for rapid deployment.</p>
+            </div>
+          </div>
+          <div class="about-feat">
+            <div class="about-feat-icon">⚡</div>
+            <div class="about-feat-text">
+              <h4>Fast Installation Guarantee</h4>
+              <p>Industrial systems installed within 7 days of order confirmation — guaranteed.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PROCESS ─── -->
+<section id="process">
+  <div class="container">
+    <div class="text-center" data-aos="fade-up">
+      <span class="section-tag">How It Works</span>
+      <h2 class="section-title">Our <span class="accent">Proven</span> Process</h2>
+      <p class="section-subtitle mx-auto mt-3">From the first call to clean water — a seamless, transparent, and professional experience.</p>
+    </div>
+    <div class="process-track">
+      <div class="process-line"></div>
+      <div class="process-steps">
+        <div class="process-step" data-aos="fade-up" data-aos-delay="0">
+          <div class="process-step-num">📞</div>
+          <div class="process-step-name">Consultation</div>
+          <p class="process-step-desc">Free site visit & requirement analysis by our senior engineer</p>
+        </div>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="150">
+          <div class="process-step-num">🔬</div>
+          <div class="process-step-name">Water Testing</div>
+          <p class="process-step-desc">Comprehensive lab testing for 50+ parameters — full report provided</p>
+        </div>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+          <div class="process-step-num">📐</div>
+          <div class="process-step-name">Custom Design</div>
+          <p class="process-step-desc">System engineered specifically for your water quality and usage</p>
+        </div>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="450">
+          <div class="process-step-num">⚙️</div>
+          <div class="process-step-name">Installation</div>
+          <p class="process-step-desc">Professional installation with full testing and staff training</p>
+        </div>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="600">
+          <div class="process-step-num">🛡️</div>
+          <div class="process-step-name">Maintenance</div>
+          <p class="process-step-desc">AMC plans with scheduled servicing and 24/7 emergency support</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PROJECTS ─── -->
+<section id="projects">
+  <div class="container">
+    <div class="row align-items-end mb-0" data-aos="fade-up">
+      <div class="col-lg-7">
+        <span class="section-tag">Our Portfolio</span>
+        <h2 class="section-title">Projects That <span class="accent">Define</span> Excellence</h2>
+      </div>
+      <div class="col-lg-5 text-lg-end">
+        <p class="section-subtitle">200+ successfully deployed systems across Nepal's top institutions.</p>
+      </div>
+    </div>
+    <div class="projects-grid" data-aos="fade-up" data-aos-delay="200">
+      <div class="proj-card">
+        <div class="proj-bg"><img src="house.avif" alt="" style="object-fit: cover; width: 100%; height: 100%;"></div>
+        <div class="proj-overlay">
+          <span class="proj-tag">Hospitality</span>
+          <div class="proj-title">5-Star Hotels, Kathmandu</div>
+          <div class="proj-sub">20,000 LPH RO System · 3 properties</div>
+        </div>
+        <div class="proj-hover-btn">View Project →</div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-bg"><img src="h.avif" alt="" style="object-fit: cover; width: 100%; height: 100%;"></div>
+        <div class="proj-overlay">
+          <span class="proj-tag">Healthcare</span>
+          <div class="proj-title">Major Hospitals</div>
+          <div class="proj-sub">Dialysis-grade water systems</div>
+        </div>
+        <div class="proj-hover-btn">View Project →</div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-bg"><img src="OIP.jfif" alt="" style="object-fit: cover; width: 100%; height: 100%;"></div>
+        <div class="proj-overlay">
+          <span class="proj-tag">Industrial</span>
+          <div class="proj-title">Manufacturing Plants</div>
+          <div class="proj-sub">50,000 LPH industrial RO plant</div>
+        </div>
+        <div class="proj-hover-btn">View Project →</div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-bg"><img src="school.jfif" alt="" style="object-fit: cover; width: 100%; height: 100%;"></div>
+        <div class="proj-overlay">
+          <span class="proj-tag">Education</span>
+          <div class="proj-title">International Schools</div>
+          <div class="proj-sub">Multi-campus purification network</div>
+        </div>
+        <div class="proj-hover-btn">View Project →</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── WHY CHOOSE US ─── -->
+<section id="why">
+  <div class="container">
+    <div class="text-center" data-aos="fade-up">
+      <span class="section-tag">Why Us</span>
+      <h2 class="section-title">The <span class="accent">WSN</span> Advantage</h2>
+      <p class="section-subtitle mx-auto mt-3">We don't just sell water treatment equipment. We engineer complete water solutions with lifelong support.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card" data-aos="zoom-in" data-aos-delay="0">
+        <div class="why-icon-wrap">🏅</div>
+        <div class="why-title">Certified Team</div>
+        <p class="why-desc">All engineers hold international certifications in water treatment and membrane technology.</p>
+      </div>
+      <div class="why-card" data-aos="zoom-in" data-aos-delay="80">
+        <div class="why-icon-wrap">🔬</div>
+        <div class="why-title">Modern Technology</div>
+        <p class="why-desc">We use the latest German & Japanese membranes and IoT-enabled smart monitoring systems.</p>
+      </div>
+      <div class="why-card" data-aos="zoom-in" data-aos-delay="160">
+        <div class="why-icon-wrap">🕐</div>
+        <div class="why-title">24/7 Support</div>
+        <p class="why-desc">Round-the-clock emergency support and dedicated account managers for AMC clients.</p>
+      </div>
+      <div class="why-card" data-aos="zoom-in" data-aos-delay="240">
+        <div class="why-icon-wrap">💰</div>
+        <div class="why-title">Best Value</div>
+        <p class="why-desc">Premium international quality at competitive Nepali pricing. Transparent quotes, no hidden costs.</p>
+      </div>
+      <div class="why-card" data-aos="zoom-in" data-aos-delay="320">
+        <div class="why-icon-wrap">🗺️</div>
+        <div class="why-title">Nepal-wide Service</div>
+        <p class="why-desc">From Kathmandu to Pokhara to Biratnagar — we service clients across all 7 provinces.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── TESTIMONIALS ─── -->
+<section id="testimonials">
+  <div class="container">
+    <div class="text-center" data-aos="fade-up">
+      <span class="section-tag">Client Reviews</span>
+      <h2 class="section-title">What Our <span class="accent">Clients</span> Say</h2>
+    </div>
+    <div class="testi-slider" data-aos="fade-up" data-aos-delay="200">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"Water Solution Nepal installed a 15,000 LPH RO plant at our hotel. The quality is exceptional, our guests love the pure water, and the team was incredibly professional throughout."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">S</div>
+          <div>
+            <div class="testi-name">Santosh Shrestha</div>
+            <div class="testi-role">GM · Hotel Himalayan Luxury, Kathmandu</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"We needed dialysis-grade water for our hospital. WSN delivered a system that met WHO standards. The ongoing AMC support gives us complete peace of mind."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">D</div>
+          <div>
+            <div class="testi-name">Dr. Diksha Rana</div>
+            <div class="testi-role">Director · Nepal Care Hospital, Lalitpur</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"Our factory needed 50,000 LPH of process water daily. WSN designed a complete system within budget and delivered in just 5 days. Outstanding execution."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">R</div>
+          <div>
+            <div class="testi-name">Rajesh Gupta</div>
+            <div class="testi-role">CEO · Himalayan Beverages Pvt. Ltd.</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"We've had RO systems from 3 other companies before. None compared to what WSN installed. 2 years later, zero issues. The water quality report is perfect every time."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">P</div>
+          <div>
+            <div class="testi-name">Priya Tamang</div>
+            <div class="testi-role">Principal · Trinity International School, KTM</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CTA ─── -->
+<section id="cta">
+  <div class="cta-glow1"></div>
+  <div class="cta-glow2"></div>
+  <div class="container">
+    <div class="cta-inner" data-aos="zoom-in">
+      <span class="section-tag" style="color:#fff;background:rgba(255,255,255,0.1);padding:6px 16px;border-radius:50px;border:1px solid rgba(255,255,255,0.2);">Take Action Today</span>
+      <h2 class="cta-title mt-3">Need Clean &amp; Safe<br>Water Solutions?</h2>
+      <p class="cta-sub">Get a free site visit and water analysis from Nepal's most trusted water treatment specialists. No commitment required.</p>
+      <button class="btn-cta-main">
+        📅 Book Free Site Visit
+      </button>
+      <div class="cta-note">Free consultation · No obligation · Same-week response</div>
+      <!-- Contact quick row -->
+      <!-- <div class="d-flex gap-4 justify-content-center flex-wrap mt-5" style="font-size:14px;color:rgba(255,255,255,0.7);">
+        <span>📞 +977 01-XXXXXXX</span>
+        <span>📱 +977 98XXXXXXXX</span>
+        <span>✉️ info@watersolutionnepal.com</span>
+        <span>📍 Kathmandu, Nepal</span>
+      </div> -->
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="container">
+    <div class="row gy-5">
+      <div class="col-lg-4">
+        <div class="footer-brand">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+            <div style="width:40px;height:40px;background:linear-gradient(135deg,#00C2FF,#0FF0C8);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;">💧</div>
+            <div class="logo-text">Water Solution Nepal</div>
+          </div>
+          <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;">PVT. LTD. · EST. 2015</div>
+        </div>
+        <p class="footer-tagline">Nepal's most trusted industrial & commercial water treatment engineering company. Pure water, smart systems, lifelong support.</p>
+        <div class="footer-social">
+          <a class="social-btn" href="#">f</a>
+          <a class="social-btn" href="#">in</a>
+          <a class="social-btn" href="#">▶</a>
+          <a class="social-btn" href="#">✉</a>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-2">
+        <div class="footer-heading">Services</div>
+        <ul class="footer-links">
+          <li><a href="#">Industrial RO Plant</a></li>
+          <li><a href="#">Commercial Treatment</a></li>
+          <li><a href="#">Water Filtration</a></li>
+          <li><a href="#">Water Testing</a></li>
+          <li><a href="#">AMC & Maintenance</a></li>
+          <li><a href="#">Borewell Treatment</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-6 col-lg-2">
+        <div class="footer-heading">Company</div>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="project.html">Projects</a></li>
+          <li><a href="certification.html">Certifications</a></li>
+          <li><a href="career.html">Careers</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <div class="footer-heading">Get in Touch</div>
+        <div class="footer-contact">
+          <div class="contact-item">
+            <span class="icon">📍</span>
+            <div class="text"><strong>Head Office</strong>New Baneshwor, Kathmandu, Bagmati Province, Nepal</div>
+          </div>
+          <div class="contact-item">
+            <span class="icon">📞</span>
+            <div class="text"><strong>Phone / WhatsApp</strong>+977 01-XXXXXXX · +977 98XXXXXXXX</div>
+          </div>
+          <div class="contact-item">
+            <span class="icon">✉️</span>
+            <div class="text"><strong>Email</strong>info@watersolutionnepal.com</div>
+          </div>
+        </div>
+        <div style="margin-top:20px;">
+          <div class="footer-heading">Newsletter</div>
+          <p style="font-size:12.5px;color:var(--text-muted);margin-bottom:10px;">Get water quality tips and service updates.</p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="Your email address">
+            <button>Subscribe</button>
+          </div>
+        </div>
+        <div class="map-embed mt-3">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.0!2d85.3240!3d27.7172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDA0JzEwLjkiTiA4NcKwMTknMjYuNCJF!5e0!3m2!1sen!2snp!4v1000000000000!5m2!1sen!2snp" loading="lazy" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-text">© 2026 Water Solution Nepal Pvt. Ltd. All rights reserved. Powered by <a href="https://www.turantcall.com" target="_blank">Turant Call</a></div>
+      <div class="footer-bottom-badges">
+        <!-- <div class="cert-badge">ISO Certified</div>
+        <div class="cert-badge">NSF Approved</div>
+        <div class="cert-badge">WHO Compliant</div> -->
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

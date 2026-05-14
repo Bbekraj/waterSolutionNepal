@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Water Solution Nepal Pvt. Ltd. | Pure Water. Smart Future.</title>
+  <!-- Google Fonts & Bootstrap Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8fcff;
+      overflow-x: hidden;
+      color: #1A2C3E;
+    }
+
+    /* Premium dark sections & glassmorphism */
+    .bg-premium-dark {
+      background: linear-gradient(135deg, #0A1C2F 0%, #0A1E2F 100%);
+      color: white;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(0px);
+      border-radius: 1rem;
+      box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.02);
+      transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+      border: 2px solid rgba(3, 221, 250, 0.953);
+      p{
+        text-align: justify !important;
+        padding: 0 1rem;
+      }
+    }
+
+    .glass-card-dark {
+      background: rgba(18, 32, 48, 0.75);
+      backdrop-filter: blur(12px);
+      border-radius: 2rem;
+      border: 1px solid rgba(0, 255, 255, 0.2);
+      box-shadow: 0 25px 40px -12px rgba(0, 0, 0, 0.3);
+    }
+
+    .glass-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 30px 50px -12px rgba(0, 0, 0, 0.15);
+      background-color: #0B3D91;
+      animation: borderGlow 1.5s infinite alternate;
+      color:#fff;
+      a{
+        color:#fff;
+      }
+      p{
+        color:#fff !important;
+      }
+      i{
+        color:#fff !important;
+      }
+    }
+    @keyframes borderGlow {
+  0% {
+    border-color: #00d9ff;
+    box-shadow: 0 0 15px #00d9ff;
+  }
+
+  25% {
+    border-color: #00bfff;
+    box-shadow: 0 0 20px #00bfff;
+  }
+
+  50% {
+    border-color: #00ffff;
+    box-shadow: 0 0 25px #00ffff;
+  }
+
+  75% {
+    border-color: #4facfe;
+    box-shadow: 0 0 20px #4facfe;
+  }
+
+  100% {
+    border-color: #00d9ff;
+    box-shadow: 0 0 15px #00d9ff;
+  }
+}
+
+    /* Ocean blue + cyan gradients */
+    .text-gradient {
+      background: linear-gradient(120deg, #0077b6, #00b4d8, #48cae4);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .btn-premium {
+      background: linear-gradient(105deg, #0077b6, #00b4d8);
+      border: none;
+      padding: 0.9rem 2.2rem;
+      border-radius: 3rem;
+      font-weight: 600;
+      letter-spacing: -0.2px;
+      transition: all 0.25s ease;
+      box-shadow: 0 8px 18px rgba(0, 180, 216, 0.25);
+      color: white;
+    }
+
+    .btn-premium-outline {
+      background: transparent;
+      border: 1.5px solid rgba(0, 180, 216, 0.7);
+      backdrop-filter: blur(4px);
+      padding: 0.85rem 2rem;
+      border-radius: 3rem;
+      color: white;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+
+    .btn-premium-outline:hover {
+      background: rgba(0, 180, 216, 0.2);
+      border-color: #00b4d8;
+      color: white;
+      transform: scale(1.02);
+    }
+
+    /* Hero wave 3D styling */
+    .hero-wave-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .hero-section {
+      position: relative;
+      min-height: 100vh;
+      background: linear-gradient(145deg, #0C2E42 0%, #06212E 100%);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+    }
+
+    .floating-glass-card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(14px);
+      border-radius: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Counter style */
+    .counter-number {
+      font-size: 3.2rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #fff, #90e0ef);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    /* service icons 3d style hover */
+    .service-icon {
+      font-size: 3rem;
+      background: linear-gradient(145deg, #0077b6, #00b4d8);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      transition: transform 0.3s;
+    }
+
+    .service-card:hover .service-icon {
+      transform: scale(1.1) translateY(-5px);
+    }
+
+    /* Process timeline */
+    .process-step {
+      position: relative;
+    }
+
+    .process-line {
+      position: absolute;
+      top: 40px;
+      left: 50%;
+      width: 80%;
+      height: 3px;
+      background: linear-gradient(90deg, #00b4d8, #0077b6);
+      transform: translateX(-50%);
+      z-index: 0;
+    }
+
+    @media (max-width: 768px) {
+      .process-line {
+        display: none;
+      }
+    }
+
+    /* Project masonry gallery */
+    .project-item {
+      border-radius: 1.5rem;
+      overflow: hidden;
+      transition: all 0.5s ease;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+    }
+    .project-item img {
+      transition: transform 0.6s ease;
+      height: 260px;
+      object-fit: cover;
+      width: 100%;
+    }
+    .project-item:hover img {
+      transform: scale(1.06);
+    }
+
+    /* Testimonial slider custom */
+    .testimonial-card {
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: 2rem;
+      padding: 2rem;
+      box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s;
+    }
+
+    /* footer newsletter */
+    .newsletter-input {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(0, 180, 216, 0.4);
+      border-radius: 3rem;
+      padding: 0.8rem 1.2rem;
+      color: white;
+    }
+
+    .btn-cyber {
+      background: #00b4d8;
+      border-radius: 3rem;
+      padding: 0.6rem 1.5rem;
+      font-weight: 600;
+    }
+
+    /* AOS custom */
+    [data-aos] {
+      transition-timing-function: cubic-bezier(0.2, 0.9, 0.4, 1);
+    }
+  </style>
+  <link rel="stylesheet" href="custom.css">
+</head>
+<body>
+
+<!-- Navbar (premium sticky) -->
+<nav class="navbar navbar-expand-lg py-3 fixed-top" style="background: rgba(10, 28, 47, 0.85); backdrop-filter: blur(12px); z-index: 1030;">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-white" href="#" style="font-size: 1.8rem; letter-spacing: -0.5px;">
+      💧 Water Solution Nepal <span style="font-size: 0.9rem; color: #00b4d8;">Pvt. Ltd.</span>
+    </a>
+    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+      <i class="bi bi-list fs-2 text-white"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3">
+        <li class="nav-item"><a class="nav-link text-white-50 fw-semibold" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white-50 fw-semibold" href="service.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link text-white-50 fw-semibold" href="project.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link text-white-50 fw-semibold" href="#">Contact</a></li>
+      </ul>
+      <a href="#" class="btn btn-sm btn-premium ms-lg-3 px-4 py-2">Call Now →</a>
+    </div>
+  </div>
+</nav>
+
+<!-- 1. HERO SECTION - 3D Animated Water Wave Background -->
+<section class="hero-section position-relative" style="min-height: 100vh;">
+  <canvas id="waveCanvas" class="hero-wave-canvas"></canvas>
+  <div class="container hero-content py-5">
+    <div class="row align-items-center min-vh-100">
+      <div class="col-lg-7 text-white" data-aos="fade-up" data-aos-duration="1000">
+        <span class="badge bg-cyan-600 mb-3 px-4 py-2 rounded-pill" style="background: rgba(0,180,216,0.2); color:#90e0ef;">Nepal's Trusted Leader</span>
+        <h1 class="display-2 fw-bold mb-3" style="letter-spacing: -2px;">Pure Water.<br><span class="text-gradient">Smart Future.</span></h1>
+        <p class="lead w-75 mb-4">Advanced industrial RO plants, commercial water purification, and premium AMC services across Nepal. Engineered for excellence.</p>
+        <div class="d-flex gap-3 flex-wrap">
+          <button class="btn btn-premium btn-lg px-5 py-3 rounded-pill fs-6"><i class="bi bi-calendar-check me-2"></i>Get Free Consultation</button>
+          <button class="btn btn-premium-outline btn-lg px-5 py-3 rounded-pill fs-6"><i class="bi bi-grid-3x3-gap-fill me-2"></i>Explore Solutions</button>
+        </div>
+      </div>
+      <!-- <div class="col-lg-5 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="200">
+        <div class="floating-glass-card p-4 p-xl-5 text-center">
+          <i class="bi bi-cpu fs-1 text-cyan-400"></i>
+          <div class="mt-3">
+            <img src="https://cdn-icons-png.flaticon.com/512/5394/5394769.png" alt="3D RO Plant" style="width: 80%; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));" class="img-fluid">
+            <p class="small text-white-50 mt-3">Advanced Reverse Osmosis Technology</p>
+          </div>
+        </div>
+      </div> -->
+      <div class="col-lg-5 hero-visual" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+        <div class="ro-plant-wrap">
+          <div class="ro-main-card">
+            <div class="ro-diagram">
+              <svg class="ro-svg" viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="pipeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#003d5c;stop-opacity:1"/>
+                    <stop offset="50%" style="stop-color:#00C2FF;stop-opacity:.8"/>
+                    <stop offset="100%" style="stop-color:#0FF0C8;stop-opacity:.6"/>
+                  </linearGradient>
+                  <linearGradient id="tankGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#0B3D91;stop-opacity:.9"/>
+                    <stop offset="100%" style="stop-color:#003d5c;stop-opacity:.9"/>
+                  </linearGradient>
+                  <filter id="glow">
+                    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                    <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                  </filter>
+                  <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+                    <path d="M0,0 L0,6 L8,3 z" fill="#00C2FF" opacity=".7"/>
+                  </marker>
+                </defs>
+                <!-- Water source tank -->
+                <rect x="20" y="80" width="60" height="140" rx="8" fill="url(#tankGrad)" stroke="#00C2FF" stroke-width="1.5" opacity=".9"/>
+                <text x="50" y="72" text-anchor="middle" fill="#00C2FF" font-size="10" font-family="Plus Jakarta Sans">RAW WATER</text>
+                <rect x="22" y="180" width="56" height="38" rx="4" fill="#00C2FF" opacity=".2"/>
+                <rect x="22" y="160" width="56" height="22" rx="4" fill="#00C2FF" opacity=".12"/>
+                <!-- Pre-filter -->
+                <rect x="130" y="100" width="50" height="100" rx="8" fill="url(#tankGrad)" stroke="#0FF0C8" stroke-width="1.5"/>
+                <text x="155" y="92" text-anchor="middle" fill="#0FF0C8" font-size="9" font-family="Plus Jakarta Sans">PRE-FILTER</text>
+                <circle cx="155" cy="150" r="28" fill="none" stroke="#0FF0C8" stroke-width="1" opacity=".4"/>
+                <circle cx="155" cy="150" r="18" fill="none" stroke="#0FF0C8" stroke-width="1.5" opacity=".6"/>
+                <!-- RO Membrane -->
+                <ellipse cx="270" cy="150" rx="30" ry="62" fill="url(#tankGrad)" stroke="#00C2FF" stroke-width="2"/>
+                <ellipse cx="270" cy="150" rx="16" ry="46" fill="none" stroke="#00C2FF" stroke-width="1" opacity=".5"/>
+                <text x="270" y="230" text-anchor="middle" fill="#00C2FF" font-size="9.5" font-family="Plus Jakarta Sans">RO MEMBRANE</text>
+                <!-- Output tank -->
+                <rect x="370" y="80" width="60" height="140" rx="8" fill="url(#tankGrad)" stroke="#0FF0C8" stroke-width="1.5"/>
+                <text x="400" y="72" text-anchor="middle" fill="#0FF0C8" font-size="10" font-family="Plus Jakarta Sans">PURE WATER</text>
+                <rect x="372" y="82" width="56" height="136" rx="6" fill="#0FF0C8" opacity=".08"/>
+                <!-- Pipes with animation -->
+                <path d="M80 150 L130 150" stroke="url(#pipeGrad)" stroke-width="8" stroke-linecap="round" filter="url(#glow)">
+                  <animate attributeName="stroke-dashoffset" values="50;0" dur="1.5s" repeatCount="indefinite"/>
+                </path>
+                <path d="M180 150 L240 150" stroke="url(#pipeGrad)" stroke-width="8" stroke-linecap="round" filter="url(#glow)">
+                  <animate attributeName="stroke-dashoffset" values="50;0" dur="1.5s" begin=".3s" repeatCount="indefinite"/>
+                </path>
+                <path d="M300 150 L370 150" stroke="url(#pipeGrad)" stroke-width="8" stroke-linecap="round" filter="url(#glow)">
+                  <animate attributeName="stroke-dashoffset" values="50;0" dur="1.5s" begin=".6s" repeatCount="indefinite"/>
+                </path>
+                <!-- Pump circle -->
+                <circle cx="105" cy="150" r="14" fill="#0B3D91" stroke="#00C2FF" stroke-width="1.5" filter="url(#glow)"/>
+                <text x="105" y="154" text-anchor="middle" fill="#00C2FF" font-size="10">⚙</text>
+                <!-- Labels -->
+                <text x="240" y="260" text-anchor="middle" fill="rgba(200,220,255,0.4)" font-size="9" font-family="Plus Jakarta Sans">HIGH-PRESSURE PUMP SYSTEM</text>
+                <!-- Droplets animating upward -->
+                <circle cx="400" cy="200" r="3" fill="#0FF0C8" opacity=".8">
+                  <animate attributeName="cy" values="200;82" dur="2s" repeatCount="indefinite" begin="0s"/>
+                  <animate attributeName="opacity" values=".8;0" dur="2s" repeatCount="indefinite" begin="0s"/>
+                </circle>
+                <circle cx="390" cy="180" r="2" fill="#00C2FF" opacity=".6">
+                  <animate attributeName="cy" values="180;82" dur="2.5s" repeatCount="indefinite" begin=".5s"/>
+                  <animate attributeName="opacity" values=".6;0" dur="2.5s" repeatCount="indefinite" begin=".5s"/>
+                </circle>
+              </svg>
+            </div>
+            <div class="mt-3 d-flex justify-content-around">
+              <div class="text-center">
+                <div style="font-family:Syne,sans-serif;font-size:22px;font-weight:800;background:linear-gradient(90deg,#00C2FF,#0FF0C8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">99.9%</div>
+                <div style="font-size:10px;color:var(--text-muted);letter-spacing:1px;text-transform:uppercase;">Purification</div>
+              </div>
+              <div style="width:1px;background:var(--glass-border)"></div>
+              <div class="text-center">
+                <div style="font-family:Syne,sans-serif;font-size:22px;font-weight:800;background:linear-gradient(90deg,#00C2FF,#0FF0C8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">0 TDS</div>
+                <div style="font-size:10px;color:var(--text-muted);letter-spacing:1px;text-transform:uppercase;">Output</div>
+              </div>
+              <div style="width:1px;background:var(--glass-border)"></div>
+              <div class="text-center">
+                <div style="font-family:Syne,sans-serif;font-size:22px;font-weight:800;background:linear-gradient(90deg,#00C2FF,#0FF0C8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">ISO</div>
+                <div style="font-size:10px;color:var(--text-muted);letter-spacing:1px;text-transform:uppercase;">Certified</div>
+              </div>
+            </div>
+          </div>
+          <!-- Floating cards -->
+          <div class="float-card fc1">
+            <div class="fc-label">Water Quality</div>
+            <div class="fc-value">●<span style="color:#0FF0C8">●</span>●</div>
+            <div class="fc-unit">Excellent</div>
+          </div>
+          <div class="float-card fc2">
+            <div class="fc-label">System Status</div>
+            <div class="fc-value" style="color:#0FF0C8;font-size:16px;">ONLINE</div>
+            <div class="fc-unit">Active · 24/7</div>
+          </div>
+          <div class="float-card fc3">
+            <div class="fc-label">TDS Level</div>
+            <div class="fc-value">≤5</div>
+            <div class="fc-unit">ppm output</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="position-absolute bottom-0 start-0 w-100 overflow-hidden" style="line-height: 0;">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none" style="width: 100%; height: 70px;">
+      <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.31,122.07,103.67,182.43,87.55,241.18,71.7,284.76,66.29,321.39,56.44Z" fill="#f8fcff"></path>
+    </svg>
+  </div>
+</section>
+
+<!-- 2. TRUST SECTION with animated counters -->
+<div class="position-relative counter-main-div-top">
+  <div id="footer-placeholder"></div>
+  <section class="container  counter-div " data-aos="fade-up">
+  <div class="row g-5 my-4 text-center ">
+    <div class="col-md-3">
+      <div class="counter-number" data-target="18">0</div>
+      <p class="fw-semibold text-white mt-2">Years of Excellence</p>
+    </div>
+    <div class="col-md-3">
+      <div class="counter-number" data-target="325">0</div>
+      <p class="fw-semibold text-white mt-2">Projects Completed</p>
+    </div>
+    <div class="col-md-3">
+      <div class="counter-number" data-target="12500">0</div>
+      <p class="fw-semibold text-white mt-2">Happy Clients</p>
+    </div>
+    <div class="col-md-3">
+      <div class="counter-number" data-target="7">0</div>
+      <p class="fw-semibold text-white mt-2">Provinces Covered</p>
+    </div>
+  </div>
+  
+</section>
+</div>
+
+<!-- 3. SERVICES SECTION -->
+<section class="our-service">
+    <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="absolute inset-0 w-full h-full object-cover"
+    >
+        <source src="file.mp4" type="video/mp4">
+    </video>
+  <div class="container py-5" data-aos="fade-up">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-white fs-1">Premium Water <span class="text-white">Solutions</span></h2>
+      <p class="lead text-white w-75 mx-auto">Advanced engineering for industrial, commercial & residential sectors.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-3 col-md-6">
+        <div class="glass-card p-4 h-100 service-card text-center"><i class="bi bi-droplet service-icon"></i><h4 class="mt-3 fw-bold">Industrial RO Plant</h4><p class="text-muted text-justify">High-recovery systems for factories and manufacturing units refer to advanced industrial setups designed to maximize the reuse and extraction of valuable materials, energy, or resources from production processes, waste streams, or by-products.</p></div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="glass-card p-4 h-100 service-card text-center"><i class="bi bi-building service-icon"></i><h4 class="mt-3 fw-bold">Commercial Treatment</h4><p class="text-muted">Hotels, hospitals, and large-scale water purification systems use commercial treatment equipment for clean, safe, hygienic, and high-quality water daily.</p></div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="glass-card p-4 h-100 service-card text-center"><i class="bi bi-funnel service-icon"></i><h4 class="mt-3 fw-bold">Water Filtration</h4><p class="text-muted">Ultrafiltration, nanofiltration, custom water filtration systems, industrial membrane filters, and advanced purification solutions for commercial applications.</p></div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="glass-card p-4 h-100 service-card text-center"><i class="bi bi-funnel service-icon"></i><h4 class="mt-3 fw-bold">Water Testing</h4><p class="text-muted">Lab-grade analysis and quality certification.</p></div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="glass-card p-4 h-100 service-card text-center"><i class="bi bi-tools service-icon"></i><h4 class="mt-3 fw-bold">AMC & Maintenance</h4><p class="text-muted">24/7 annual maintenance contracts with proactive care.</p></div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="glass-card p-4 h-100 service-card text-center"><i class="bi bi-water service-icon"></i><h4 class="mt-3 fw-bold">Borewell Treatment</h4><p class="text-muted">Iron, arsenic & hardness removal solutions.</p></div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="glass-card p-4 h-100 service-card text-center"><i class="bi bi-building service-icon"></i><h4 class="mt-3 fw-bold">Commercial Treatment</h4><p class="text-muted">Hotels, hospitals & large-scale water purification.</p></div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="glass-card p-4 h-100 service-card text-center"><i class="bi bi-funnel service-icon"></i><h4 class="mt-3 fw-bold">Water Filtration</h4><p class="text-muted">Ultrafiltration, nanofiltration, custom water filtration systems, industrial membrane filters, and advanced purification solutions for commercial applications..</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. ABOUT COMPANY SECTION split -->
+<section class="container my-5 p-4" data-aos="fade-right">
+  <div class="row align-items-center g-5">
+    <div class="col-lg-6"><img src="OIP.jfif" class="img-fluid rounded-4 shadow-lg" alt="Engineer team"></div>
+    <div class="col-lg-6"><h2 class="fw-bold">Crafting <span class="text-gradient">Pure Intelligence</span></h2><p class="mt-3">Since 2006, Water Solution Nepal Pvt. Ltd. has been the benchmark for water treatment engineering in Nepal. Our mission: deliver sustainable, high-performance water solutions.</p><ul class="list-unstyled mt-4"><li><i class="bi bi-check-circle-fill text-cyan-500 me-2"></i> ISO Certified & Government Approved</li><li><i class="bi bi-check-circle-fill text-cyan-500 me-2"></i> Cutting-edge European membrane technology</li><li><i class="bi bi-check-circle-fill text-cyan-500 me-2"></i> Trusted by 500+ industrial clients</li></ul><button class="btn btn-premium mt-3">Our Story →</button></div>
+  </div>
+</section>
+
+<!-- 5. PROCESS SECTION with timeline animated -->
+<section class="bg-premium-dark py-5" style="margin: 4rem 0;">
+  <div class="container py-5">
+    <div class="text-center mb-5"><h2 class="display-5 fw-bold text-white">Scientific Approach <span class="text-gradient">Simple Process</span></h2><p class="text-white-50">From consultation to long-term support, we deliver excellence.</p></div>
+    <div class="row position-relative">
+      <div class="process-line d-none d-lg-block"></div>
+      <div class="col-md-3 text-center process-step" data-aos="fade-up"><div class="bg-white rounded-circle mx-auto d-flex align-items-center justify-content-center mb-3" style="width: 70px;height:70px;"><i class="bi bi-chat-dots fs-1 text-primary"></i></div><h5 class="text-white fw-bold">1. Consultation</h5><p class="text-white-50 small">On-site water assessment</p></div>
+      <div class="col-md-3 text-center process-step" data-aos="fade-up" data-aos-delay="100"><div class="bg-white rounded-circle mx-auto d-flex align-items-center justify-content-center mb-3" style="width: 70px;height:70px;"><i class="bi bi-droplet fs-1 text-primary"></i></div><h5 class="text-white fw-bold">2. Water Testing</h5><p class="text-white-50 small">Advanced lab analysis</p></div>
+      <div class="col-md-3 text-center process-step" data-aos="fade-up" data-aos-delay="200"><div class="bg-white rounded-circle mx-auto d-flex align-items-center justify-content-center mb-3" style="width: 70px;height:70px;"><i class="bi bi-gear fs-1 text-primary"></i></div><h5 class="text-white fw-bold">3. Installation</h5><p class="text-white-50 small">Precision engineering</p></div>
+      <div class="col-md-3 text-center process-step" data-aos="fade-up" data-aos-delay="300"><div class="bg-white rounded-circle mx-auto d-flex align-items-center justify-content-center mb-3" style="width: 70px;height:70px;"><i class="bi bi-shield-check fs-1 text-primary"></i></div><h5 class="text-white fw-bold">4. Lifetime Support</h5><p class="text-white-50 small">AMC & remote monitoring</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. PROJECT SHOWCASE masonry grid -->
+<section class="container my-5 py-4" data-aos="zoom-in">
+  <div class="text-center"><h2 class="display-5 fw-bold">Trusted by <span class="text-gradient">Industry Leaders</span></h2><p>Flagship installations across Nepal</p></div>
+  <div class="row g-4 mt-3">
+    <div class="col-md-4 project-item"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600" class="img-fluid"><div class="p-3 bg-white"><h5>🏨 Hotel Yak & Yeti</h5><small>Commercial RO 5000 LPH</small></div></div>
+    <div class="col-md-4 project-item"><img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600" class="img-fluid"><div class="p-3 bg-white"><h5>🏥 Norvic Hospital</h5><small>Medical grade purification</small></div></div>
+    <div class="col-md-4 project-item"><img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=600" class="img-fluid"><div class="p-3 bg-white"><h5>🏭 Himalayan Brewery</h5><small>Industrial ETP+RO</small></div></div>
+    <div class="col-md-6 project-item"><img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800" class="img-fluid"><div class="p-3 bg-white"><h5>📚 Kathmandu World School</h5><small>UV+RO system 2000 students</small></div></div>
+    <div class="col-md-6 project-item"><img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800" class="img-fluid"><div class="p-3 bg-white"><h5>🏭 Shiva Cement Factory</h5><small>Zero Liquid Discharge Plant</small></div></div>
+  </div>
+</section>
+
+<!-- 7. WHY CHOOSE US premium cards -->
+<section class="container py-5" data-aos="fade-up">
+  <div class="text-center"><h2 class="display-5 fw-bold">Why <span class="text-gradient">Industry Trusts Us</span></h2></div>
+  <div class="row g-4 mt-4">
+    <div class="col-md-4 text-center"><div class="glass-card p-4"><i class="bi bi-award fs-1 text-cyan-500"></i><h4 class="mt-2 fw-bold">Certified Team</h4><p class="text-muted">NSF, ISO 9001, and WQA specialists</p></div></div>
+    <div class="col-md-4 text-center"><div class="glass-card p-4"><i class="bi bi-cpu fs-1 text-cyan-500"></i><h4 class="mt-2 fw-bold">Modern Technology</h4><p class="text-muted">Smart IoT-enabled RO systems</p></div></div>
+    <div class="col-md-4 text-center"><div class="glass-card p-4"><i class="bi bi-headset fs-1 text-cyan-500"></i><h4 class="mt-2 fw-bold">24/7 Support</h4><p class="text-muted">Emergency service within 4 hours</p></div></div>
+    <div class="col-md-4 text-center"><div class="glass-card p-4"><i class="bi bi-wallet2 fs-1 text-cyan-500"></i><h4 class="mt-2 fw-bold">Affordable Solutions</h4><p class="text-muted">ROI-focused industrial pricing</p></div></div>
+    <div class="col-md-4 text-center"><div class="glass-card p-4"><i class="bi bi-geo-alt fs-1 text-cyan-500"></i><h4 class="mt-2 fw-bold">Nepal-wide Service</h4><p class="text-muted">15+ district service centers</p></div></div>
+    <div class="col-md-4 text-center"><div class="glass-card p-4"><i class="bi bi-tree fs-1 text-cyan-500"></i><h4 class="mt-2 fw-bold">Eco-Friendly</h4><p class="text-muted">Zero waste water recycling</p></div></div>
+  </div>
+</section>
+
+<!-- 8. TESTIMONIALS slider glassmorphism -->
+<section class="container py-4" data-aos="fade-up">
+  <div class="text-center"><h2 class="display-6 fw-bold">What Our <span class="text-gradient">Partners Say</span></h2></div>
+  <div id="testimonialCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active"><div class="testimonial-card mx-auto" style="max-width: 700px;"><i class="bi bi-quote fs-1 text-cyan-400"></i><p class="fs-5">"Water Solution Nepal provided our beverage factory with an unmatched RO system. Production uptime increased by 40%."</p><div class="d-flex align-items-center mt-3"><img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-circle me-3" width="50"><div><strong>Ramesh Adhikari</strong><br>CTO, Gorkha Breweries</div></div></div></div>
+      <div class="carousel-item"><div class="testimonial-card mx-auto" style="max-width: 700px;"><i class="bi bi-quote fs-1 text-cyan-400"></i><p class="fs-5">"Their AMC service is world-class. Our hospital’s water purification has never been safer."</p><div class="d-flex align-items-center mt-3"><img src="https://randomuser.me/api/portraits/women/68.jpg" class="rounded-circle me-3" width="50"><div><strong>Dr. Samjhana Karki</strong><br>Norvic Hospital Admin</div></div></div></div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon bg-dark rounded-circle p-3"></span></button>
+    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next"><span class="carousel-control-next-icon bg-dark rounded-circle p-3"></span></button>
+  </div>
+</section>
+
+<!-- 9. CALL TO ACTION large premium banner -->
+<section class="container my-5" data-aos="flip-up">
+  <div class="bg-premium-dark rounded-5 p-5 p-lg-5 text-center" style="background: linear-gradient(125deg, #05202e, #0a2f42);">
+    <h2 class="display-5 fw-bold text-white">Need Clean & Safe Water Solutions?</h2>
+    <p class="lead text-white-50 mb-4">Join 500+ industries that trust us with their water treatment needs.</p>
+    <button class="btn btn-premium btn-lg px-5 py-3 rounded-pill fs-5"><i class="bi bi-pin-map-fill me-2"></i>Book Free Site Visit</button>
+  </div>
+</section>
+
+<!-- 10. FOOTER with water flow animation background -->
+<div class="footer-wave-bg" style="position: relative;">
+  <canvas id="footerWaveCanvas" style="position: absolute; bottom: 0; width: 100%; height: 180px; z-index: 0;"></canvas>
+  <footer id="contact" class="pt-5 pb-4" style="position: relative; z-index: 2;">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-md-4"><h3 class="text-white fw-bold">💧 Water Solution Nepal<span class="text-cyan-400"> Pvt. Ltd.</span></h3><p class="text-white">Kathmandu, Nepal | Baneshwor, Industrial Hub</p><div class="d-flex gap-3 mt-2"><i class="bi bi-facebook fs-4 text-white"></i><i class="bi bi-linkedin fs-4 text-white"></i><i class="bi bi-instagram fs-4 text-white"></i><i class="bi bi-twitter-x fs-4 text-white"></i></div></div>
+        <div class="col-md-2"><h5 class="text-white">Quick Links</h5><ul class="list-unstyled"><li><a href="#" class="text-white text-decoration-none">Home</a></li><li><a href="#services" class="text-white text-decoration-none">Services</a></li><li><a href="#projects" class="text-white text-decoration-none">Projects</a></li><li><a href="#" class="text-white text-decoration-none">Careers</a></li></ul></div>
+        <div class="col-md-3"><h5 class="text-white">Contact Info</h5><p class="text-white"><i class="bi bi-telephone-fill me-2"></i> +977 1-5901234<br><i class="bi bi-envelope me-2"></i> hello@watersolutionnepal.com<br><i class="bi bi-geo-alt me-2"></i> Baneshwor, Kathmandu, Nepal</p></div>
+        <div class="col-md-3"><h5 class="text-white">Newsletter</h5><div class="d-flex"><input type="email" class="form-control bg-whiteour-service text-white" placeholder="Email address" style="background: rgba(255,255,255,0.1); border: none;"><button class="btn btn-cyan-500 bg-cyan-600 px-3 rounded-end">Subscribe</button></div><div class="mt-3"><iframe src="https://maps.google.com/maps?q=Kathmandu&t=&z=14&output=embed" width="100%" height="90" style="border:0; border-radius: 1rem;" loading="lazy"></iframe></div></div>
+      </div>
+      <hr class="opacity-25"><div class="text-center text-white-50 small">© 2026 Water Solution Nepal Pvt. Ltd. — Innovation. Integrity. Purity.</div>
+    </div>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="shared.js"></script>
+<script>
+  AOS.init({ duration: 800, once: true, offset: 100 });
+  // Counter animation
+  const counters = document.querySelectorAll('.counter-number');
+  const speed = 150;
+  counters.forEach(counter => {
+    const updateCount = () => {
+      const target = parseInt(counter.getAttribute('data-target'));
+      let count = parseInt(counter.innerText);
+      const increment = Math.ceil(target / 30);
+      if (count < target) {
+        count += increment;
+        counter.innerText = count;
+        setTimeout(updateCount, 40);
+      } else counter.innerText = target;
+    };
+    updateCount();
+  });
+  // 3D Wave Canvas Animation
+  const canvas = document.getElementById('waveCanvas');
+  let ctx = canvas.getContext('2d');
+  let width = window.innerWidth, height = window.innerHeight;
+  let time = 0;
+  function resizeCanvas() { width = window.innerWidth; height = window.innerHeight; canvas.width = width; canvas.height = height; }
+  window.addEventListener('resize', resizeCanvas);
+  resizeCanvas();
+  function animateWave() {
+    if (!ctx) return;
+    ctx.clearRect(0, 0, width, height);
+    ctx.fillStyle = "#0C2E42";
+    ctx.fillRect(0, 0, width, height);
+    let waveCount = 4;
+    for (let i = 0; i < waveCount; i++) {
+      ctx.beginPath();
+      let amplitude = 40 + i * 15;
+      let frequency = 0.008 + i * 0.003;
+      let yOffset = height * (0.7 + i * 0.07);
+      ctx.moveTo(0, yOffset);
+      for (let x = 0; x <= width; x += 15) {
+        let y = yOffset + Math.sin(x * frequency + time + i) * amplitude * 0.7 + Math.cos(x * 0.005 + time * 1.2) * 12;
+        ctx.lineTo(x, y);
+      }
+      ctx.lineTo(width, height);
+      ctx.lineTo(0, height);
+      ctx.fillStyle = `rgba(0, 180, 216, ${0.12 - i * 0.02})`;
+      ctx.fill();
+    }
+    // floating particles
+    for (let p = 0; p < 100; p++) {
+      let fx = (p * 131) % width;
+      let fy = (Math.sin(p * 0.02 + time * 2) * 60 + height * 0.4) % height;
+      ctx.beginPath(); ctx.arc(fx, fy, 1.5, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(200, 235, 255, ${0.5 + Math.sin(time + p) * 0.2})`;
+      ctx.fill();
+    }
+    time += 0.02;
+    requestAnimationFrame(animateWave);
+  }
+  animateWave();
+</script>
+<script>
+  // Footer wave animation (Canvas 2D)
+  const footerCanvas = document.getElementById('footerWaveCanvas');
+  const footerCtx = footerCanvas.getContext('2d');
+  let fw, fh, ftime = 0;
+  function resizeFooter() { fw = window.innerWidth; fh = 180; footerCanvas.width = fw; footerCanvas.height = fh; }
+  window.addEventListener('resize', resizeFooter);
+  resizeFooter();
+  function drawFooterWave() {
+    requestAnimationFrame(drawFooterWave);
+    if (!footerCtx) return;
+    footerCtx.clearRect(0, 0, fw, fh);
+    footerCtx.fillStyle = "#021c2a";
+    footerCtx.fillRect(0, 0, fw, fh);
+    for (let i = 0; i < 3; i++) {
+      footerCtx.beginPath();
+      let amplitude = 16 + i * 8;
+      let freq = 0.008;
+      let yOffset = fh - 40 + i * 18;
+      footerCtx.moveTo(0, yOffset);
+      for (let x = 0; x <= fw; x += 20) {
+        let y = yOffset + Math.sin(x * freq + ftime * 2 + i) * amplitude + Math.cos(x * 0.012 + ftime) * 6;
+        footerCtx.lineTo(x, y);
+      }
+      footerCtx.lineTo(fw, fh);
+      footerCtx.lineTo(0, fh);
+      footerCtx.fillStyle = `rgba(0, 160, 210, ${0.14 - i * 0.03})`;
+      footerCtx.fill();
+    }
+    ftime += 0.025;
+  }
+  drawFooterWave();
+  
+  
+</script>
+</body>
+</html>

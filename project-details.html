@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Contact Us — Water Solution Nepal Pvt. Ltd.</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="main.css">
+<style>
+    /* ───────────────── PROJECT DETAILS SECTION ───────────────── */
+
+.project-details-section{
+  position:relative;
+  padding:140px 0;
+  overflow:hidden;
+  background:
+    linear-gradient(135deg,#04131d 0%, #071b27 100%);
+}
+
+/* Background */
+.details-blur{
+  position:absolute;
+  border-radius:50%;
+  filter:blur(120px);
+  opacity:.25;
+}
+
+.blur-left{
+  width:350px;
+  height:350px;
+  background:#00C2FF;
+  top:-120px;
+  left:-120px;
+}
+
+.blur-right{
+  width:320px;
+  height:320px;
+  background:#0FF0C8;
+  bottom:-120px;
+  right:-120px;
+}
+
+/* Hero */
+.project-details-hero{
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+  gap:60px;
+  align-items:center;
+  margin-bottom:120px;
+}
+
+.project-details-image{
+  height:600px;
+  border-radius:35px;
+  overflow:hidden;
+}
+
+.project-details-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.details-tag{
+  display:inline-block;
+  padding:10px 18px;
+  border-radius:50px;
+  background:rgba(15,240,200,.12);
+  color:#0FF0C8;
+  font-size:13px;
+  margin-bottom:20px;
+}
+
+.project-details-content h1{
+  font-size:58px;
+  line-height:1.05;
+  font-weight:800;
+  color:#fff;
+  margin-bottom:25px;
+  font-family:'Syne',sans-serif;
+}
+
+.project-details-content p{
+  color:rgba(255,255,255,.72);
+  line-height:1.9;
+  margin-bottom:35px;
+}
+
+/* Info Grid */
+.project-info-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.info-box{
+  padding:24px;
+  border-radius:22px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.info-box h6{
+  color:#0FF0C8;
+  margin-bottom:10px;
+}
+
+.info-box p{
+  margin:0;
+  color:#fff;
+  font-size:18px;
+  font-weight:600;
+}
+
+/* Overview */
+.details-overview{
+  display:grid;
+  grid-template-columns:1fr 420px;
+  gap:50px;
+  margin-bottom:120px;
+}
+
+.overview-left h2{
+  color:#fff;
+  font-size:46px;
+  margin-bottom:25px;
+  font-family:'Syne',sans-serif;
+}
+
+.overview-left p{
+  color:rgba(255,255,255,.72);
+  line-height:2;
+  margin-bottom:24px;
+}
+
+.highlight-card{
+  padding:40px;
+  border-radius:30px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.highlight-card h3{
+  color:#fff;
+  margin-bottom:28px;
+  font-size:30px;
+}
+
+.highlight-card ul{
+  padding:0;
+  margin:0;
+  list-style:none;
+}
+
+.highlight-card ul li{
+  color:rgba(255,255,255,.72);
+  padding:14px 0;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+/* Gallery */
+.project-gallery{
+  margin-bottom:120px;
+}
+
+.gallery-header{
+  margin-bottom:60px;
+}
+
+.gallery-header h2{
+  color:#fff;
+  font-size:50px;
+  font-family:'Syne',sans-serif;
+}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:30px;
+}
+
+.gallery-item{
+  height:350px;
+  border-radius:30px;
+  overflow:hidden;
+}
+
+.gallery-item img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.5s ease;
+}
+
+.gallery-item:hover img{
+  transform:scale(1.08);
+}
+
+/* Process */
+.project-process-wrapper{
+  margin-bottom:120px;
+}
+
+.process-heading{
+  margin-bottom:60px;
+}
+
+.process-heading h2{
+  color:#fff;
+  font-size:50px;
+  font-family:'Syne',sans-serif;
+}
+
+.process-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:25px;
+}
+
+.process-card{
+  padding:40px 30px;
+  border-radius:28px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.08);
+  transition:.4s ease;
+}
+
+.process-card:hover{
+  transform:translateY(-10px);
+}
+
+.process-card span{
+  font-size:54px;
+  font-weight:800;
+  color:#0FF0C8;
+  display:block;
+  margin-bottom:18px;
+}
+
+.process-card h4{
+  color:#fff;
+  margin-bottom:18px;
+}
+
+.process-card p{
+  color:rgba(255,255,255,.7);
+  line-height:1.8;
+  margin:0;
+}
+
+/* CTA */
+.project-cta-box{
+  text-align:center;
+  padding:80px 40px;
+  border-radius:40px;
+  background:
+    linear-gradient(135deg,
+    rgba(0,194,255,.15),
+    rgba(15,240,200,.12));
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.project-cta-box h2{
+  color:#fff;
+  font-size:52px;
+  margin-bottom:20px;
+  font-family:'Syne',sans-serif;
+}
+
+.project-cta-box p{
+  color:rgba(255,255,255,.72);
+  margin-bottom:35px;
+}
+
+.project-cta-box a{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:18px 34px;
+  border-radius:18px;
+  background:linear-gradient(135deg,#00C2FF,#0FF0C8);
+  color:#04131d;
+  text-decoration:none;
+  font-weight:700;
+  transition:.4s ease;
+}
+
+.project-cta-box a:hover{
+  transform:translateY(-5px);
+}
+
+/* Responsive */
+@media(max-width:991px){
+
+  .project-details-hero,
+  .details-overview{
+    grid-template-columns:1fr;
+  }
+
+  .gallery-grid{
+    grid-template-columns:1fr;
+  }
+
+  .process-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .project-details-content h1{
+    font-size:42px;
+  }
+
+}
+
+@media(max-width:576px){
+
+  .project-details-section{
+    padding:100px 0;
+  }
+
+  .process-grid{
+    grid-template-columns:1fr;
+  }
+
+  .project-details-content h1,
+  .overview-left h2,
+  .gallery-header h2,
+  .process-heading h2,
+  .project-cta-box h2{
+    font-size:34px;
+  }
+
+  .project-details-image{
+    height:380px;
+  }
+
+}
+</style>
+</head>
+<body>
+
+<!-- ─── NAVBAR ─── -->
+<nav class="navbar navbar-expand-lg" id="navbar">
+  <div class="container">
+    <a class="nav-logo" href="index2.html">
+      <div class="nav-logo-icon">💧</div>
+      <div class="nav-logo-text">
+        <span>Water Solution Nepal</span>
+        <span>PVT. LTD.</span>
+      </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-center gap-1">
+        <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <!-- <li class="nav-item"><a class="nav-link" href="process.html">Process</a></li> -->
+        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        <li class="nav-item ms-2"><a class="nav-link btn-nav" href="contact.html">Get Consultation</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- main contact part -->
+<!-- ───────────────── PROJECT DETAILS SECTION ───────────────── -->
+<section class="project-details-section">
+
+  <!-- Background Effects -->
+  <div class="details-blur blur-left"></div>
+  <div class="details-blur blur-right"></div>
+
+  <div class="container">
+
+    <!-- Hero -->
+    <div class="project-details-hero">
+
+      <div class="project-details-image" data-aos="fade-right">
+        <img src="house.avif" alt="">
+      </div>
+
+      <div class="project-details-content" data-aos="fade-left">
+
+        <span class="details-tag">
+          Hospitality Sector
+        </span>
+
+        <h1>
+          Luxury Hotel RO Plant Installation
+        </h1>
+
+        <p>
+          Complete commercial water purification solution designed
+          for premium hotel operations in Kathmandu with advanced
+          reverse osmosis, automated filtration and 24/7 monitoring.
+        </p>
+
+        <div class="project-info-grid">
+
+          <div class="info-box">
+            <h6>Capacity</h6>
+            <p>20,000 LPH</p>
+          </div>
+
+          <div class="info-box">
+            <h6>Location</h6>
+            <p>Kathmandu, Nepal</p>
+          </div>
+
+          <div class="info-box">
+            <h6>Duration</h6>
+            <p>45 Days</p>
+          </div>
+
+          <div class="info-box">
+            <h6>Industry</h6>
+            <p>Hospitality</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Overview -->
+    <div class="details-overview">
+
+      <div class="overview-left" data-aos="fade-up">
+
+        <h2>Project Overview</h2>
+
+        <p>
+          This project involved designing and installing a fully
+          automated commercial RO purification system for multiple
+          luxury hotel properties. The system ensures continuous
+          high-quality water supply for guest rooms, kitchens,
+          laundry and operational facilities.
+        </p>
+
+        <p>
+          Our engineering team completed the installation with
+          advanced filtration technology, smart monitoring systems
+          and long-term maintenance planning.
+        </p>
+
+      </div>
+
+      <div class="overview-right" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="highlight-card">
+          <h3>Key Highlights</h3>
+
+          <ul>
+            <li>20,000 LPH RO Capacity</li>
+            <li>Fully Automated Operation</li>
+            <li>Multi-Stage Filtration</li>
+            <li>Energy Efficient System</li>
+            <li>24/7 Technical Monitoring</li>
+            <li>AMC Support Included</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Gallery -->
+    <div class="project-gallery">
+
+      <div class="gallery-header text-center">
+        <span class="details-tag">
+          Project Gallery
+        </span>
+
+        <h2>Installation Showcase</h2>
+      </div>
+
+      <div class="gallery-grid">
+
+        <div class="gallery-item" data-aos="zoom-in">
+          <img src="house.avif" alt="">
+        </div>
+
+        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+          <img src="h.avif" alt="">
+        </div>
+
+        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+          <img src="OIP.jfif" alt="">
+        </div>
+
+        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+          <img src="school.jfif" alt="">
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Process -->
+    <div class="project-process-wrapper">
+
+      <div class="process-heading text-center">
+
+        <span class="details-tag">
+          Working Process
+        </span>
+
+        <h2>How We Completed This Project</h2>
+
+      </div>
+
+      <div class="process-grid">
+
+        <div class="process-card" data-aos="fade-up">
+          <span>01</span>
+          <h4>Site Inspection</h4>
+          <p>
+            Initial water analysis and system planning.
+          </p>
+        </div>
+
+        <div class="process-card" data-aos="fade-up" data-aos-delay="100">
+          <span>02</span>
+          <h4>System Design</h4>
+          <p>
+            Custom RO design based on project requirements.
+          </p>
+        </div>
+
+        <div class="process-card" data-aos="fade-up" data-aos-delay="200">
+          <span>03</span>
+          <h4>Installation</h4>
+          <p>
+            Professional setup and equipment integration.
+          </p>
+        </div>
+
+        <div class="process-card" data-aos="fade-up" data-aos-delay="300">
+          <span>04</span>
+          <h4>Testing & Delivery</h4>
+          <p>
+            Final testing with quality assurance and support.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="project-cta-box" data-aos="fade-up">
+
+      <h2>
+        Need a Similar Water Treatment Project?
+      </h2>
+
+      <p>
+        Let our engineers design a custom solution
+        for your business or institution.
+      </p>
+
+      <a href="contact.html">
+        Get Free Consultation →
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="container">
+    <div class="row gy-5">
+      <div class="col-lg-4">
+        <div class="footer-brand">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+            <div style="width:40px;height:40px;background:linear-gradient(135deg,#00C2FF,#0FF0C8);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;">💧</div>
+            <div class="logo-text">Water Solution Nepal</div>
+          </div>
+          <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;">PVT. LTD. · EST. 2015</div>
+        </div>
+        <p class="footer-tagline">Nepal's most trusted industrial & commercial water treatment engineering company. Pure water, smart systems, lifelong support.</p>
+        <div class="footer-social">
+          <a class="social-btn" href="#">f</a>
+          <a class="social-btn" href="#">in</a>
+          <a class="social-btn" href="#">▶</a>
+          <a class="social-btn" href="#">✉</a>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-2">
+        <div class="footer-heading">Services</div>
+        <ul class="footer-links">
+          <li><a href="#">Industrial RO Plant</a></li>
+          <li><a href="#">Commercial Treatment</a></li>
+          <li><a href="#">Water Filtration</a></li>
+          <li><a href="#">Water Testing</a></li>
+          <li><a href="#">AMC & Maintenance</a></li>
+          <li><a href="#">Borewell Treatment</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-6 col-lg-2">
+        <div class="footer-heading">Company</div>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="project.html">Projects</a></li>
+          <li><a href="certification.html">Certifications</a></li>
+          <li><a href="career.html">Careers</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <div class="footer-heading">Get in Touch</div>
+        <div class="footer-contact">
+          <div class="contact-item">
+            <span class="icon">📍</span>
+            <div class="text"><strong>Head Office</strong>New Baneshwor, Kathmandu, Bagmati Province, Nepal</div>
+          </div>
+          <div class="contact-item">
+            <span class="icon">📞</span>
+            <div class="text"><strong>Phone / WhatsApp</strong>+977 01-XXXXXXX · +977 98XXXXXXXX</div>
+          </div>
+          <div class="contact-item">
+            <span class="icon">✉️</span>
+            <div class="text"><strong>Email</strong>info@watersolutionnepal.com</div>
+          </div>
+        </div>
+        <div style="margin-top:20px;">
+          <div class="footer-heading">Newsletter</div>
+          <p style="font-size:12.5px;color:var(--text-muted);margin-bottom:10px;">Get water quality tips and service updates.</p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="Your email address">
+            <button>Subscribe</button>
+          </div>
+        </div>
+        <div class="map-embed mt-3">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.0!2d85.3240!3d27.7172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDA0JzEwLjkiTiA4NcKwMTknMjYuNCJF!5e0!3m2!1sen!2snp!4v1000000000000!5m2!1sen!2snp" loading="lazy" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-text">© 2026 Water Solution Nepal Pvt. Ltd. All rights reserved. Powered by <a href="https://www.turantcall.com" target="_blank">Turant Call</a></div>
+      <div class="footer-bottom-badges">
+        <!-- <div class="cert-badge">ISO Certified</div>
+        <div class="cert-badge">NSF Approved</div>
+        <div class="cert-badge">WHO Compliant</div> -->
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="shared.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
