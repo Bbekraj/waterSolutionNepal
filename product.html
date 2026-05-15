@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Contact Us — Water Solution Nepal Pvt. Ltd.</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="main.css">
+<style>
+    /* ───────────────── PROJECT DETAILS SECTION ───────────────── */
+/* =========================================
+   PRODUCTS PAGE
+========================================= */
+
+.products-page-section{
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #050816,
+            #0c142d,
+            #121f40
+        );
+}
+
+/* =========================================
+   BACKGROUND ORBS
+========================================= */
+
+.products-bg-orb{
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(120px);
+
+    opacity: 0.4;
+}
+
+.orb-left{
+    width: 350px;
+    height: 350px;
+
+    background: #0066ff;
+
+    top: -100px;
+    left: -100px;
+}
+
+.orb-right{
+    width: 300px;
+    height: 300px;
+
+    background: #00f0ff;
+
+    bottom: -100px;
+    right: -100px;
+}
+
+/* =========================================
+   TITLE
+========================================= */
+
+.products-page-title{
+    position: relative;
+
+    z-index: 2;
+}
+
+.products-tag{
+    display: inline-block;
+
+    padding: 10px 18px;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0066ff,
+            #00f0ff
+        );
+
+    color: #fff;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+.products-page-title h2{
+    font-size: 52px;
+    font-weight: 800;
+
+    color: #fff;
+
+    margin-bottom: 20px;
+}
+
+.products-page-title p{
+    color: rgba(255,255,255,0.7);
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.products-sidebar{
+    position: sticky;
+
+    top: 100px;
+
+    padding: 35px;
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,0.06);
+
+    backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.25);
+}
+
+.sidebar-title h4{
+    color: #fff;
+
+    font-size: 28px;
+    font-weight: 800;
+
+    margin-bottom: 30px;
+}
+
+/* CATEGORY LIST */
+
+.category-list{
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+}
+
+.category-list li{
+    margin-bottom: 15px;
+}
+
+.category-list li a{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 16px 18px;
+
+    border-radius: 18px;
+
+    background: rgba(255,255,255,0.05);
+
+    color: rgba(255,255,255,0.8);
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: 0.5s ease;
+}
+
+.category-list li a:hover{
+    background:
+        linear-gradient(
+            135deg,
+            #0066ff,
+            #00f0ff
+        );
+
+    color: #fff;
+
+    transform: translateX(8px);
+}
+
+/* =========================================
+   PRODUCT CARD
+========================================= */
+
+.product-card-link{
+    text-decoration: none;
+}
+
+.product-card-modern{
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,0.06);
+
+    backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    transition: 0.7s ease;
+
+    transform-style: preserve-3d;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.25);
+
+    height: 100%;
+}
+
+/* HOVER */
+
+.product-card-modern:hover{
+    transform:
+        perspective(1000px)
+        rotateY(8deg)
+        rotateX(6deg)
+        translateY(-12px);
+
+    box-shadow:
+        0 30px 70px rgba(0,0,0,0.4);
+}
+
+/* GLOW */
+
+.product-card-glow{
+    position: absolute;
+
+    top: -80px;
+    right: -80px;
+
+    width: 220px;
+    height: 220px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(0,240,255,0.35),
+            transparent
+        );
+
+    filter: blur(70px);
+}
+
+/* IMAGE */
+
+.product-card-image{
+    overflow: hidden;
+
+    height: 270px;
+}
+
+.product-card-image img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.8s ease;
+}
+
+.product-card-modern:hover img{
+    transform: scale(1.1);
+}
+
+/* CONTENT */
+
+.product-card-content{
+    position: relative;
+
+    z-index: 2;
+
+    padding: 25px;
+}
+
+.product-card-content h4{
+    color: #fff;
+
+    font-size: 24px;
+    font-weight: 700;
+
+    line-height: 1.4;
+
+    margin: 0;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width: 992px){
+
+    .products-page-title h2{
+        font-size: 40px;
+    }
+
+    .products-sidebar{
+        margin-bottom: 40px;
+    }
+}
+
+@media(max-width: 768px){
+
+    .products-page-title h2{
+        font-size: 32px;
+    }
+
+    .product-card-image{
+        height: 220px;
+    }
+
+    .product-card-content h4{
+        font-size: 20px;
+    }
+
+    .products-sidebar{
+        padding: 25px;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- ─── NAVBAR ─── -->
+<nav class="navbar navbar-expand-lg" id="navbar">
+  <div class="container">
+    <a class="nav-logo" href="index.html">
+      <div class="nav-logo-icon">💧</div>
+      <div class="nav-logo-text">
+        <span>Water Solution Nepal</span>
+        <span>PVT. LTD.</span>
+      </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-center gap-1">
+        <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <!-- <li class="nav-item"><a class="nav-link" href="process.html">Process</a></li> -->
+        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        <li class="nav-item ms-2"><a class="nav-link btn-nav" href="contact.html">Get Consultation</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- main contact part -->
+<!-- ───────────────── PROJECT DETAILS SECTION ───────────────── -->
+<section class="products-page-section py-5 mt-5">
+
+    <!-- BACKGROUND EFFECTS -->
+
+    <div class="products-bg-orb orb-left"></div>
+    <div class="products-bg-orb orb-right"></div>
+
+    <div class="container">
+
+        <!-- SECTION TITLE -->
+
+        <!-- <div class="products-page-title text-center mb-5">
+
+            <span class="products-tag">
+                Our Products
+            </span>
+
+            <h2>
+                Explore Engineering Products
+            </h2>
+
+            <p>
+                Browse our modern engineering solutions and innovative
+                industrial products.
+            </p>
+
+        </div> -->
+
+        <div class="row">
+
+            <!-- LEFT SIDEBAR -->
+
+            <div class="col-lg-3 mb-4 mb-lg-0">
+
+                <div class="products-sidebar">
+
+                    <div class="sidebar-title">
+
+                        <h4>
+                            Categories
+                        </h4>
+
+                    </div>
+
+                    <!-- CATEGORY LIST -->
+
+                    <ul class="category-list">
+
+                        <li>
+                            <a href="product-details.html">
+
+                                <i class="fas fa-angle-right"></i>
+
+                                Hydropower
+
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+
+                                <i class="fas fa-angle-right"></i>
+
+                                Industrial Automation
+
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+
+                                <i class="fas fa-angle-right"></i>
+
+                                Electrical Engineering
+
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+
+                                <i class="fas fa-angle-right"></i>
+
+                                Solar Energy
+
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+
+                                <i class="fas fa-angle-right"></i>
+
+                                Mechanical Systems
+
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT PRODUCTS -->
+
+            <div class="col-lg-9">
+
+                <div class="row g-4">
+
+                    <!-- PRODUCT CARD -->
+
+                    <div class="col-lg-4 col-md-6">
+
+                        <a href="product-details.html"
+                           class="product-card-link">
+
+                            <div class="product-card-modern">
+
+                                <!-- GLOW -->
+
+                                <div class="product-card-glow"></div>
+
+                                <!-- IMAGE -->
+
+                                <div class="product-card-image">
+
+                                    <img
+                                        src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
+                                        alt="Product"
+                                    >
+
+                                </div>
+
+                                <!-- CONTENT -->
+
+                                <div class="product-card-content">
+
+                                    <h4>
+                                        Smart Control System
+                                    </h4>
+
+                                </div>
+
+                            </div>
+
+                        </a>
+
+                    </div>
+
+                    <!-- PRODUCT CARD -->
+
+                    <div class="col-lg-4 col-md-6">
+
+                        <a href="product-details.html"
+                           class="product-card-link">
+
+                            <div class="product-card-modern">
+
+                                <div class="product-card-glow"></div>
+
+                                <div class="product-card-image">
+
+                                    <img
+                                        src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1200&auto=format&fit=crop"
+                                        alt="Product"
+                                    >
+
+                                </div>
+
+                                <div class="product-card-content">
+
+                                    <h4>
+                                        Solar Monitoring Panel
+                                    </h4>
+
+                                </div>
+
+                            </div>
+
+                        </a>
+
+                    </div>
+
+                    <!-- PRODUCT CARD -->
+
+                    <div class="col-lg-4 col-md-6">
+
+                        <a href="product-details.html"
+                           class="product-card-link">
+
+                            <div class="product-card-modern">
+
+                                <div class="product-card-glow"></div>
+
+                                <div class="product-card-image">
+
+                                    <img
+                                        src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=1200&auto=format&fit=crop"
+                                        alt="Product"
+                                    >
+
+                                </div>
+
+                                <div class="product-card-content">
+
+                                    <h4>
+                                        Industrial Turbine
+                                    </h4>
+
+                                </div>
+
+                            </div>
+
+                        </a>
+
+                    </div>
+
+                    <!-- PRODUCT CARD -->
+
+                    <div class="col-lg-4 col-md-6">
+
+                        <a href="product-details.html"
+                           class="product-card-link">
+
+                            <div class="product-card-modern">
+
+                                <div class="product-card-glow"></div>
+
+                                <div class="product-card-image">
+
+                                    <img
+                                        src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?q=80&w=1200&auto=format&fit=crop"
+                                        alt="Product"
+                                    >
+
+                                </div>
+
+                                <div class="product-card-content">
+
+                                    <h4>
+                                        Energy Distribution Unit
+                                    </h4>
+
+                                </div>
+
+                            </div>
+
+                        </a>
+
+                    </div>
+
+                    <!-- PRODUCT CARD -->
+
+                    <div class="col-lg-4 col-md-6">
+
+                        <a href="product-details.html"
+                           class="product-card-link">
+
+                            <div class="product-card-modern">
+
+                                <div class="product-card-glow"></div>
+
+                                <div class="product-card-image">
+
+                                    <img
+                                        src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=1200&auto=format&fit=crop"
+                                        alt="Product"
+                                    >
+
+                                </div>
+
+                                <div class="product-card-content">
+
+                                    <h4>
+                                        Solar Engineering System
+                                    </h4>
+
+                                </div>
+
+                            </div>
+
+                        </a>
+
+                    </div>
+
+                    <!-- PRODUCT CARD -->
+
+                    <div class="col-lg-4 col-md-6">
+
+                        <a href="product-details.html"
+                           class="product-card-link">
+
+                            <div class="product-card-modern">
+
+                                <div class="product-card-glow"></div>
+
+                                <div class="product-card-image">
+
+                                    <img
+                                        src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop"
+                                        alt="Product"
+                                    >
+
+                                </div>
+
+                                <div class="product-card-content">
+
+                                    <h4>
+                                        Mechanical Power Unit
+                                    </h4>
+
+                                </div>
+
+                            </div>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="container">
+    <div class="row gy-5">
+      <div class="col-lg-4">
+        <div class="footer-brand">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+            <div style="width:40px;height:40px;background:linear-gradient(135deg,#00C2FF,#0FF0C8);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;">💧</div>
+            <div class="logo-text">Water Solution Nepal</div>
+          </div>
+          <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;">PVT. LTD. · EST. 2015</div>
+        </div>
+        <p class="footer-tagline">Nepal's most trusted industrial & commercial water treatment engineering company. Pure water, smart systems, lifelong support.</p>
+        <div class="footer-social">
+          <a class="social-btn" href="#">f</a>
+          <a class="social-btn" href="#">in</a>
+          <a class="social-btn" href="#">▶</a>
+          <a class="social-btn" href="#">✉</a>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-2">
+        <div class="footer-heading">Services</div>
+        <ul class="footer-links">
+          <li><a href="#">Industrial RO Plant</a></li>
+          <li><a href="#">Commercial Treatment</a></li>
+          <li><a href="#">Water Filtration</a></li>
+          <li><a href="#">Water Testing</a></li>
+          <li><a href="#">AMC & Maintenance</a></li>
+          <li><a href="#">Borewell Treatment</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-6 col-lg-2">
+        <div class="footer-heading">Company</div>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="project.html">Projects</a></li>
+          <li><a href="certification.html">Certifications</a></li>
+          <li><a href="career.html">Careers</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <div class="footer-heading">Get in Touch</div>
+        <div class="footer-contact">
+          <div class="contact-item">
+            <span class="icon">📍</span>
+            <div class="text"><strong>Head Office</strong>New Baneshwor, Kathmandu, Bagmati Province, Nepal</div>
+          </div>
+          <div class="contact-item">
+            <span class="icon">📞</span>
+            <div class="text"><strong>Phone / WhatsApp</strong>+977 01-XXXXXXX · +977 98XXXXXXXX</div>
+          </div>
+          <div class="contact-item">
+            <span class="icon">✉️</span>
+            <div class="text"><strong>Email</strong>info@watersolutionnepal.com</div>
+          </div>
+        </div>
+        <div style="margin-top:20px;">
+          <div class="footer-heading">Newsletter</div>
+          <p style="font-size:12.5px;color:var(--text-muted);margin-bottom:10px;">Get water quality tips and service updates.</p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="Your email address">
+            <button>Subscribe</button>
+          </div>
+        </div>
+        <div class="map-embed mt-3">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.0!2d85.3240!3d27.7172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDA0JzEwLjkiTiA4NcKwMTknMjYuNCJF!5e0!3m2!1sen!2snp!4v1000000000000!5m2!1sen!2snp" loading="lazy" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-text">© 2026 Water Solution Nepal Pvt. Ltd. All rights reserved. Powered by <a href="https://www.turantcall.com" target="_blank">Turant Call</a></div>
+      <div class="footer-bottom-badges">
+        <!-- <div class="cert-badge">ISO Certified</div>
+        <div class="cert-badge">NSF Approved</div>
+        <div class="cert-badge">WHO Compliant</div> -->
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="shared.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
